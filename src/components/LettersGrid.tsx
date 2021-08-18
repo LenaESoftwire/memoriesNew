@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "../styling/LettersGrid.css";
+import { shuffleArray } from "./ShuffleArray";
 
 export default function LettersGrid(): JSX.Element {
-    const lettersList = ["M", "E", "O", "R", "I", "S",
+
+    const lettersListOrdered = ["M", "E", "O", "R", "I", "S",
         "E", "M", "O", "S", "I", "R"];
 
     const [first, setFirst] = useState<number>(-1);
     const [second, setSecond] = useState<number>(-1);
     const [out, setOut] = useState<number[]>([-1]);
+    const [lettersList, setLettersList] = useState<string[]>([""]);
 
     function handleClick(index: number) {
         if (!out.includes(index)) {
@@ -26,8 +29,11 @@ export default function LettersGrid(): JSX.Element {
                 setSecond(-1);
             }
         }
-
     }
+
+    useEffect(() => {
+        setLettersList (shuffleArray(lettersListOrdered));
+    }, []);
 
     useEffect(() => {
         if (first !== -1 && second !== -1) {
