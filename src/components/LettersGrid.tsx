@@ -47,7 +47,6 @@ export default function LettersGrid(): JSX.Element {
         <div className={out.includes(index) ? "out" : first === index || second === index ? "letter" : "letter-closed"} key={index}
             onClick={() => handleClick(index)}>{l}</div>);
 
-
     return (
         <div className="letters">
             {letters}
