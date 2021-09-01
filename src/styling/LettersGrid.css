@@ -26,3 +26,18 @@
     margin: 1vw;
     border: 0.25vw solid rgb(15, 15, 15);
 }
+
+.players {
+    display: flex;
+}
+
+.active {
+    width: 50%;
+    font-size: large;
+    color: blue;
+}
+
+.player {
+    width: 50%;
+    font-size: large;
+}
