@@ -11,7 +11,7 @@ interface LetterGridProps {
 export default function LettersGrid({ step, setStep }: LetterGridProps): JSX.Element {
 
     const lettersListOrdered = ["M", "E", "O", "R", "I", "S",
-        "E", "M", "O", "S", "I", "R"];
+        "E", "M", "O", "S", "I", "R", "G", "G", "A", "A", "L", "L", "Y", "Y"];
 
     const [first, setFirst] = useState<number>(-1);
     const [second, setSecond] = useState<number>(-1);
